@@ -1,8 +1,8 @@
-<h1 align="center" id="heading"> pihole-dot-doh </h1>
+<h1 align="center" id="heading"> pihole6-dot-doh </h1>
 
 <a href="https://github.com/devzwf/pihole-dot-doh/blob/main/CHANGELOG.MD"><img src="https://img.shields.io/badge/🔶-Changelog-blue" /></a> <a href="https://ko-fi.com/O5O0FG195"><img src="https://img.shields.io/badge/%E2%98%95-Buy%20me%20a%20coffee-red" /></a>
 
-Official pihole docker with both DoT (DNS over TLS), DoH (DNS over HTTPS)  and unbound clients. Don't browse the web securely and yet still send your DNS queries in plain text!
+Official pihole 6 beta docker with both DoT (DNS over TLS), DoH (DNS over HTTPS) and unbound clients. Don't browse the web securely and yet still send your DNS queries in plain text!
 
 ## Usage:
 
@@ -15,16 +15,16 @@ version: '3.0'
 
 services:
   pihole:
-    container_name: pihole-dot-doh
-    image: devzwf/pihole-dot-doh:latest
-    hostname: pihole1
+    container_name: pihole6-dot-doh
+    image: laest/pihole6-dot-doh:latest
+    hostname: pihole
     ports:
       - "53:53/tcp"
       - "53:53/udp"
       - "67:67/udp"
       - "82:80/tcp"
     environment:
-      TZ: 'America/Toronto'
+      TZ: 'Europe/Berlin'
       #WEBPASSWORD: 'password'
       PIHOLE_DNS_: '127.1.1.1#5153;127.2.2.2#5253'
       #INTERFACE: 'br0'

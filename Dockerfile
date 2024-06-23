@@ -1,5 +1,5 @@
 ARG FRM='pihole/pihole'
-ARG TAG='latest'
+ARG TAG='development-v6'
 
 FROM debian:bullseye as unbound
 
